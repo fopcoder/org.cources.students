@@ -45,7 +45,7 @@ public class Main {
 
 			// s.sort( new AgeComparator() );
 			s.sort( new AgeComparator() );
-			s.sort( new GradeComparator() );
+			// s.sort( new GradeComparator() );
 
 			s.forEach( System.out::println );
 			System.out.println();
