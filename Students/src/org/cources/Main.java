@@ -3,6 +3,7 @@ package org.cources;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Main {
 
@@ -43,8 +44,9 @@ public class Main {
 
 			ArrayList<Student> s = g1.getStudents();
 
-			s.sort( new AgeComparator() );
-			// Collections.sort( s, new GradeComparator() );
+			// s.sort( new AgeComparator() );
+			Collections.sort( s, new AgeComparator() );
+			Collections.sort( s, new GradeComparator() );
 
 			s.forEach( System.out::println );
 			System.out.println();
