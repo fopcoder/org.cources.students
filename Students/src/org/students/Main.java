@@ -11,7 +11,7 @@ public class Main {
 		Student s3 = new Student( "манька", "облигация", 18, 5.6 );
 		Student s4 = new Student( "jonh", "doe", 70, 2.0 );
 
-		Student s5 = s4.clone(); // 88
+		Student s5 = s4.clone(); // 8800
 
 		Instructor l1 = new Instructor( "doctor", "lektor", 40, "PhD",
 				"cannibal" );
