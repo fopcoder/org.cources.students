@@ -3,6 +3,8 @@ package org.cources;
 import java.io.File;
 import java.io.FilenameFilter;
 import java.util.ArrayList;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main {
 
@@ -42,6 +44,18 @@ public class Main {
 			g3.setName( "FM52" );
 
 			ArrayList<Student> s = g1.getStudents();
+			// s.stream().filter( u -> u.getSurname() == "pupkin" && u.getAge()
+			// == 28 ).forEach( System.out::println );
+			// System.out.println( "----------------------" );
+			// System.out.println( fs );
+
+			ArrayList<Student> fsd = s.stream().filter( u -> u.getSurname() == "pupkin" && u.getAge() == 28 )
+					.collect( Collectors.toCollection( ArrayList::new ) );
+			System.out.println( fsd );
+			System.out.println( "====================" );
+
+			// List<User> olderUsers = users.stream().filter( u -> u.age > 30
+			// ).collect( Collectors.toList() );
 
 			// s.sort( new AgeComparator() );
 			s.sort( new AgeComparator() );
