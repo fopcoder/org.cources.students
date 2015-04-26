@@ -1,5 +1,8 @@
 package org.cources;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
 import java.io.Serializable;
 
 public class Human implements Cloneable, Serializable {
@@ -40,6 +43,20 @@ public class Human implements Cloneable, Serializable {
 
 	public void setAge( int age ) {
 		this.age = age;
+	}
+
+	public void saveToFile( File path ) {
+		File f = new File( path, this.getName() + ".dump.txt" );
+
+		try( PrintWriter pw = new PrintWriter( f ) ) {
+			pw.println( this );
+			pw.close();
+		}
+		catch( FileNotFoundException e ) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
 
 	@Override

@@ -98,6 +98,7 @@ public class Main {
 				}
 			}
 
+			g1.saveToFile( dir );
 		}
 		catch( ArrayIndexOutOfBoundsException | NegativeArraySizeException e ) {
 			// TODO Auto-generated catch block
