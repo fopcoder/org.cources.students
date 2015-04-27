@@ -66,6 +66,10 @@ public class Human implements Cloneable, Serializable {
 
 	@Override
 	public boolean equals( Object obj ) {
+		if( this == obj ) return true;
+		else if( obj == null ) return false;
+		else if( this.getClass() != obj.getClass() ) return false;
+
 		Human h = (Human)obj;
 		return ( this.age == h.age && this.name == h.name && this.surname == h.surname );
 	}
