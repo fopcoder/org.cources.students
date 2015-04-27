@@ -15,8 +15,12 @@ public class Main {
 		Student s4 = new Student( "jonh", "doe", 70, 2.0 );
 		Student s5 = s4.clone();
 
-		Instructor l1 = new Instructor( "doctor", "lektor", 40, "PhD", "cannibal" );
-		Instructor l2 = new Instructor( "ff", "preobrazhenski", 50, "PhD", "sharikov maker" );
+		// 2
+
+		Instructor l1 = new Instructor( "doctor", "lektor", 40, "PhD",
+				"cannibal" );
+		Instructor l2 = new Instructor( "ff", "preobrazhenski", 50, "PhD",
+				"sharikov maker" );
 
 		try {
 			Group g1 = new Group( "KK01", 4, 4 );
@@ -49,7 +53,10 @@ public class Main {
 			// System.out.println( "----------------------" );
 			// System.out.println( fs );
 
-			ArrayList<Student> fsd = s.stream().filter( u -> u.getSurname() == "pupkin" && u.getAge() == 28 )
+			ArrayList<Student> fsd = s
+					.stream()
+					.filter(
+							u -> u.getSurname() == "pupkin" && u.getAge() == 28 )
 					.collect( Collectors.toCollection( ArrayList::new ) );
 			System.out.println( fsd );
 			System.out.println( "====================" );
